@@ -1,0 +1,128 @@
+/* styles.css */
+
+/* General styling for body and background */
+body {
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.glass-effect {
+    backdrop-filter: blur(15px) saturate(180%);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+h2 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    animation: fadeInText 1.5s ease-in-out;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.input-box input {
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    border-radius: 10px;
+    padding: 15px 20px;
+    font-size: 1rem;
+    color: white;
+    width: 100%;
+    transition: all 0.3s ease;
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: #aaa;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.input-box input:focus + label,
+.input-box input:valid + label {
+    top: -10px;
+    font-size: 0.8rem;
+    color: #fff;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(145deg, #03a9f4, #00bcd4);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: linear-gradient(145deg, #00bcd4, #03a9f4);
+    transform: translateY(-2px);
+}
+
+#message {
+    margin-top: 15px;
+    color: #ffffff;
+}
+
+/* Subtle fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInText {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Video container that fills the background */
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    opacity: 1;
+}

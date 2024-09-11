@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ent But Better</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="glass-effect">
+            <h2>Login to Your Account</h2>
+            <form id="loginForm">
+                <div class="input-box">
+                    <input type="text" id="username" placeholder="Username" required>
+                    <label for="username">Username</label>
+                </div>
+                <div class="input-box">
+                    <input type="password" id="password" placeholder="Password" required>
+                    <label for="password">Password</label>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <div id="message"></div>
+        </div>
+
+        <!-- Fullscreen Background Video -->
+        <div class="video-container" id="videoContainer" style="display: none;">
+            <video id="bgVideo" autoplay muted loop>
+                <source src="Backgrounds.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
